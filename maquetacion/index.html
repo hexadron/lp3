@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="css/reset.css"/>
 		<link rel="stylesheet" href="css/menu.css"/>
 		<link rel="stylesheet" href="css/style.css"/>
@@ -66,6 +66,7 @@
 		<article>
 			<section>
 				<div class="principales">
+					<h3>¡Los más comprados!</h3>
 					<ul>
 						<li>
 							<figure>
@@ -91,6 +92,7 @@
 					</ul>
 				</div>
 				<div class="principales">
+					<h3>¡Los más nuevo de nuestra tienda!</h3>
 					<ul>
 						<li>
 							<figure>
@@ -116,6 +118,7 @@
 					</ul>
 				</div>
 				<div class="principales">
+					<h3>¡Los más baratos!</h3>
 					<ul>
 						<li>
 							<figure>
@@ -142,20 +145,19 @@
 				</div>
 			</section>
 			<aside>
-				<div id="facebook">
-					<ul>
-						<li><img src="img/logo.png" alt="face"/><span class="textFace">lorem uipsa asoas sasede def dof saed</span></li>
-						<li><img src="img/logo.png" alt="face"/><span class="textFace">lorem uipsa asoas sasede def dof saed</span></li>
-						<li><img src="img/logo.png" alt="face"/><span class="textFace">lorem uipsa asoas sasede def dof saed</span></li>
-					</ul>
-				</div>
 				<div id="twitter">
+					<h3>Twitter</h3>
+					<ul></ul>
+				</div>
+				<div id="facebook">
+					<h3>Facebook</h3>
 					<ul>
-						<li><img src="img/logo.png" alt="twitt"/><span class="textTwitt">lorem uipsa asoas sasede def dof saed</span></li>
-						<li><img src="img/logo.png" alt="twitt"/><span class="textTwitt">lorem uipsa asoas sasede def dof saed</span></li>
-						<li><img src="img/logo.png" alt="twitt"/><span class="textTwitt">lorem uipsa asoas sasede def dof saed</span></li>
+						<li><img src="img/logo.png" alt="face"/><span class="textFace">lorem uipsa asoas sasede def dof saed</span></li>
+						<li><img src="img/logo.png" alt="face"/><span class="textFace">lorem uipsa asoas sasede def dof saed</span></li>
+						<li><img src="img/logo.png" alt="face"/><span class="textFace">lorem uipsa asoas sasede def dof saed</span></li>
 					</ul>
 				</div>
+				
 			</aside>
 		</article>
 		<footer>
@@ -180,6 +182,15 @@
 				$('#da-slider').cslider({
 					bgincrement	: 0
 				});
+				
+				$.getJSON('https://api.twitter.com/1/statuses/user_timeline/carloshs92.json?callback=?',
+					function(data){
+						for(var i=0; i<3; i++)
+						{
+							$("#twitter ul").append("<li><img src='img/logo.png' alt='face"+i+"'/><span class='textTwitt'>"+data[i].text+"</span></li>");
+						}
+					}
+				);
 			
 			});
 		</script>	
