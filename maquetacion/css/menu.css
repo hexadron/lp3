@@ -1,10 +1,15 @@
+#da-slider p 
+{
+    color: White;
+}
+
 body
 {
 	background:#EEE;
 	color:#3d4445;
-	font-family: Georgia, Palatino,” Palatino Linotype”, Times, “Times New Roman”, serif;
+	font-family: "Century Gothic", Verdana, sans-serif;
 	font-size:16px;
-	line-height:1.2;
+	line-height:1.2em;
 	width:100%;
 	min-width:960px;
 	margin:0 auto;
@@ -279,6 +284,3 @@ footer ul li
 		display:none;
 	}
 }
-
-
-

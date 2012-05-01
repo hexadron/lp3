@@ -5,14 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Index : System.Web.UI.Page
+public partial class Objetivos : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
-    }
-    protected void submit_Click(object sender, EventArgs e)
-    {
-        firstLabel.Text = firstTextBox.Text;
+        Master.ingreso(Session["usuario"].ToString());
     }
 }
