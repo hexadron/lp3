@@ -9,6 +9,7 @@ public partial class Layout : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Func<int, int> hola = x => x * x;
     }
 
     public void ingreso(string usuario)
