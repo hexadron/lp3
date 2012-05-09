@@ -21,11 +21,6 @@ a
 	color:#DDD;
 }
 
-article
-{
-	width:100%;
-	height: 853px;
-}
 
 span.img-buscar
 {
@@ -120,75 +115,45 @@ nav#menu ul li
 	float:left;
 }
 
-/*Productos*/
-section
-{
-	margin-top: 100px;
-	width: 680px;
-}
+nav#menu #buscar{border: 1px solid #1A1D1D;padding: 4px 7px;width: 120px;background-color:#DDD;margin-top:-7px;
+							-webkit-transition: width ease-in 0.7s,background-color ease-in 0.7s;
+							-moz-transition: width ease-in 0.7s,background-color ease-in 0.7s;
+							-ms-transition: width ease-in 0.7s,background-color ease-in 0.7s;
+							-o-transition: width ease-in 0.7s,background-color ease-in 0.7s;
+							-webkit-border-radius: 7px;
+							-moz-border-radius: 7px;
+							-ms-border-radius: 7px;
+							-o-border-radius: 7px;}
+nav#menu #buscar:focus{width:170px;background-color:#FFF;}
 
-div.principales 
-{
-	float: left;
-	margin: 0 0 25px 0;
-	padding: 0 0 20px 0;
-	width: 740px;
-}
+/*Menu*/
 
-div.principales h3
+article
 {
-	margin: 10px 15px;
-	padding: 0 15px;
+	min-width:960px;
+	width: 1024px;
+	margin: 120px 0 20px 180px;
 }
+article ul li{clear:both;}
+ul#contenedor{position:relative;}
+li#redes,li#productos{display:inline;float:left;}
+ul#contenedor li#redes{width:290px;position: absolute;top: 0px;left: 650px;margin-left: 10px;}
+ul#contenedor li#productos{width:630px;}
 
-div.principales ul li
-{
-	display:inline;
-	float:left;
-	height: 180px;
-	margin: 10px 30px;
-	width: 170px;
-}
- 
-/*Aside*/
- 
-aside
-{
-	width: 530px;
-	position: absolute;
-	float:left;/*
-	top: -605px;*/
-	right:0;
-	margin-left:10px;
-}
-aside div
-{
-	padding: 1px 0 40px 0;
-	margin: 0px 10px;
-}
-aside div img
-{
-	width: 55px;
-}
+ul li.principales figure{display:block;float:left;}
+ul li.principales h3{font-size:1.3em;padding: 8px 20px;}
+ul li.principales figure{margin: 10px 15px;}
+ul li.principales {margin-bottom: 210px;}
 
-span.textTwitt, span.textFace
-{
-	margin: -50px 0 0 0;
-	display: block;
-	position: relative;
-	left: 67px;
-	width: 430px;
-}
-aside div h3
-{
-	margin: 20px 30px;
-}
+.thumb{	border: 8px solid #fff;position:relative;overflow:hidden;}
+.thumb section{	background: #000;padding:10px;height:140px;}
+.thumb p{	line-height:18px;}
+.thumb img{	position:absolute;left:-14px;}
 
-aside ul li
-{
-	padding: 10px 0px;
-	margin: 20px 0px;
-}
+#twitter, #facebook{width:50px;}
+#twitter ul li, #facebook ul li{display:inline; float:left;padding:15px 0;}
+#twitter h3, #facebook h3{font-size:1.3em;padding: 8px 20px;}
+#twitter ul li span, #facebook ul li span{margin-left: 60px;display: block;margin-top: -50px;width:200px;font-size:0.9em;}
 /*footer*/
 footer
 {
