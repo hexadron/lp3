@@ -131,8 +131,8 @@ nav#menu #buscar:focus{width:170px;background-color:#FFF;}
 article
 {
 	min-width:960px;
-	width: 1024px;
-	margin: 120px 0 20px 180px;
+	width: 960px;
+	margin: 120px auto 20px auto;
 }
 article ul li{clear:both;}
 ul#contenedor{position:relative;}
