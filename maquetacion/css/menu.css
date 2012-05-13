@@ -145,7 +145,7 @@ ul li.principales h3{font-size:1.3em;padding: 8px 20px;}
 ul li.principales figure{margin: 10px 15px;}
 ul li.principales {margin-bottom: 210px;}
 
-.thumb{	border: 8px solid #fff;position:relative;overflow:hidden;}
+.thumb{	border: 8px solid #adacae;position:relative;overflow:hidden;border-radius:5px;}
 .thumb section{	background: #000;padding:10px;height:140px;}
 .thumb p{	line-height:18px;}
 .thumb img{	position:absolute;left:-14px;}
@@ -154,19 +154,60 @@ ul li.principales {margin-bottom: 210px;}
 #twitter ul li, #facebook ul li{display:inline; float:left;padding:15px 0;}
 #twitter h3, #facebook h3{font-size:1.3em;padding: 8px 20px;}
 #twitter ul li span, #facebook ul li span{margin-left: 60px;display: block;margin-top: -50px;width:200px;font-size:0.9em;}
+
 /*footer*/
 footer
 {
-	background:#1a1d1d;
-	bottom:0px;
+	margin-top:50px;
 	float:left;
-	position:relative;
-	width:100%;
+	width:100%; 
+	
+}
+footer .registra
+{
+	text-align: center;
+	line-height: 3.2em;
+}
+footer .registra h4
+{
+	font-size:1.6em;
+}
+footer .registra h5, footer .registra a
+{
+	font-size:1.1em;
+	color: #3D4445;
+}
+footer  .oferta
+{
+	
+	height: 553px;
+	width: 276px;
 }
 
-footer ul li
+footer .oferta span
 {
-	display:inline;
+	background: url(../img/negocia.png) no-repeat 0 0;
+	display:block;
+	height: 138px;
+	width: 553px;
+	margin: 0 auto;
+}
+
+footer .oferta span:hover
+{
+	background: url(../img/negocia.png) no-repeat 0 -138px;
+}
+
+
+footer #contacto
+{
+	background: #1A1D1D;
+	padding: 30px 20px; 
+	height: 120px;
+}
+
+footer ul li.lista_footer
+{
 	float:left;
 }
 /*Animacion*/
@@ -200,52 +241,4 @@ footer ul li
 100%{transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg)}
 }@keyframes rotate{0%{transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);-moz-transform:rotate(0);-webkit-transform:rotate(0)}
 100%{transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg)}
-}
-
-/*Redimension*/
-@media(max-width:1200px)
-{
-  aside
-	{
-		width:415px;
-	}
-	
-	span.textTwitt, span.textFace
-	{
-		width:300px;
-	}
-}
-
-@media(max-width:1100px)
-{
-  aside
-	{
-		width:300px;
-	}
-	
-	span.textTwitt, span.textFace
-	{
-		width:190px;
-	}
-}
-
-@media(max-width:1100px)
-{
-  aside
-	{
-		width:280px;
-	}
-	
-	span.textTwitt, span.textFace
-	{
-		width:180px;
-	}
-}
-
-@media(max-width:960px)
-{
-  aside
-	{
-		display:none;
-	}
 }
