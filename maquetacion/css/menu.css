@@ -100,7 +100,10 @@ nav#menu #buscar{border: 1px solid #1A1D1D;padding: 4px 7px;width: 120px;backgro
 							-o-border-radius: 7px;}
 nav#menu #buscar:focus{width:170px;background-color:#FFF;}
 
-/*Menu*/
+/*
+ * div#banner{width:100%;background:#79BAF6;border-top: 8px solid #555;top:100px;border-bottom: 8px solid #555;position:relative;}
+ */
+ /*Menu*/
 
 article
 {
@@ -122,11 +125,11 @@ ul li.principales {margin-bottom: 210px;}
 .thumb{	border: 8px solid #adacae;position:relative;overflow:hidden;border-radius:5px;}
 .thumb section{	background: #000;padding:10px;height:140px;}
 .thumb p{	line-height:18px;}
-.thumb img{	position:absolute;left:-14px;}
+.thumb img{	position:absolute;left:-14px;background:#000;}
 
 #twitter, #facebook{width:50px;}
 #twitter ul li, #facebook ul li{display:inline; float:left;padding:15px 0;}
-#twitter h3, #facebook h3{font-size:1.3em;padding: 8px 20px;}
+#twitter h3, #facebook h3{font-size:1.3em;padding: 8px 10px;}
 #twitter ul li span, #facebook ul li span{margin-left: 60px;display: block;margin-top: -50px;width:200px;font-size:0.9em;}
 
 /*footer*/
@@ -166,11 +169,17 @@ footer .oferta span:hover
 }
 
 
-footer #contacto
+footer #foot_cont
 {
 	background: #1A1D1D;
 	padding: 30px 20px; 
 	height: 120px;
+}
+
+footer #contacto
+{
+	margin:0 auto;
+	width:960px;
 }
 
 footer div.siguenos, footer div.suscribete, footer div.otros{width:250px;color:#DDD;}
@@ -179,5 +188,6 @@ footer div.siguenos ul, footer div.suscribete ul, footer div.otros ul{font-size:
 footer div.siguenos{float:left;}
 footer div.siguenos ul li{display:inline;margin:10px 12px;}
 footer div.suscribete{margin: 0 auto;}
-footer div.suscribete input{width:120px;}
+footer div.suscribete input{width:100px;border-radius:5px;padding:2px 8px;margin:2px 4px;}
+footer div.suscribete .btn{width:100px;border-radius:5px;padding:2px 8px;margin:2px 4px;background:#159;}
 footer div.otros{float:right;margin-top:-120px;margin-right: 20px;}
