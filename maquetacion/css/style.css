@@ -11,9 +11,10 @@
 	height: 400px;
 	overflow: hidden;
 	position: relative;
-	top: 100px;
+	top: 0px;
 	transition: background-position 1s ease-out 0.3s;
 	width: 100%;
+	margin-bottom:30px;
 }
 .da-slide{
 	position: absolute;
