@@ -11,8 +11,4 @@ public partial class Index : System.Web.UI.Page
     {
 
     }
-    protected void submit_Click(object sender, EventArgs e)
-    {
-        firstLabel.Text = firstTextBox.Text;
-    }
 }

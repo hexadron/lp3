@@ -1,5 +1,5 @@
 #da-slider p {
-    color: White;
+    color: #1A1D1D;
 }
 
 body{
@@ -138,8 +138,13 @@ ul#polo-contenedor li.zoom{display:inline;float:left;padding:20px 10px;}
 ul#polo-contenedor li.zoom figure{border:solid 1px #101113 ;border-radius:10px;background:#b9bdc5;}
 
 
-
-
+/*##################    MANTENIMIENTO   ###########################*/
+h2.tit_article {text-align: center;font-size: 1.7em;margin: 25px 0;}
+form.mantenimiento{width: 600px;float: left;}
+form.mantenimiento ul li{margin:25px 0;}
+ form.mantenimiento ul li input.boton{margin-left: 35px;}
+form.mantenimiento ul li label {margin-left: 35px;width: 150px;display: block;float: left;}
+figure.mantenimiento img {margin-top: 25px;}
 
 /*###############################    FOOTER    ###############################*/
 
