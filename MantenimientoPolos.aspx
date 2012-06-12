@@ -26,9 +26,5 @@
                 <asp:GridView ID="GridView1" runat="server" Width="550px">
                 </asp:GridView>
 			</form>
-            <figure class="mantenimiento">
-				<img src="img/diseno-de-polos.png" alt="diseño de polos" width="350"/>
-			    
-			</figure>
 		</article>
 </asp:Content>
