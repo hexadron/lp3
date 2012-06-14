@@ -11,6 +11,8 @@ public partial class admin_polos_Eliminar : System.Web.UI.Page
     {
         if (!Page.IsPostBack)
         {
+            GridView1.DataSource = Tshirts.all();
+            GridView1.DataBind();
             // eliminar el polo
         }
     }

@@ -11,7 +11,8 @@ public partial class admin_polos_Index : System.Web.UI.Page
     {
         if (!Page.IsPostBack)
         {
-            // cargar los polos
+            GridView1.DataSource = Tshirts.all();
+            GridView1.DataBind();
         }
     }
 }

@@ -2,8 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <form class="content" id="form1" runat="server">
-    <asp:GridView ID="GridView1" runat="server">
-    </asp:GridView>
+    <ul class="fields">
+        <li>
+            <asp:GridView ID="GridView1" runat="server">
+            </asp:GridView>
+        </li>
+    </ul>
     <ul class="buttons">
         <li>
             <input class="main" type="submit" value="Eliminar" />

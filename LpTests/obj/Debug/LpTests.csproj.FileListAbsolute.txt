@@ -1,0 +1,5 @@
+C:\Users\julio\Documents\GitHub\lp3\LpTests\bin\Debug\LpTests.dll
+C:\Users\julio\Documents\GitHub\lp3\LpTests\bin\Debug\LpTests.pdb
+C:\Users\julio\Documents\GitHub\lp3\LpTests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\julio\Documents\GitHub\lp3\LpTests\obj\Debug\LpTests.dll
+C:\Users\julio\Documents\GitHub\lp3\LpTests\obj\Debug\LpTests.pdb

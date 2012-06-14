@@ -2,9 +2,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <form class="content" id="form1" runat="server">
-    <asp:GridView ID="GridView1" runat="server">
-    </asp:GridView>
     <ul class="fields">
+        <li>
+            <asp:GridView ID="GridView1" runat="server">
+            </asp:GridView>
+        </li>
         <li>
             <label for"expire_time">Tiempo de expiraci&oacute;n</label>
             <asp:TextBox ID="TxtTiempoExpiracion" runat="server"></asp:TextBox>

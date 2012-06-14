@@ -64,4 +64,10 @@ public static class Tshirts
     {
         return shirt.expire_time < DateTime.Now;
     }
+
+    public static List<tshirt> all()
+    {
+        return (from s in db.tshirts
+                select s).ToList();
+    }
 }

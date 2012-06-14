@@ -59,7 +59,7 @@ create table item (
 go
 
 -- Data
-insert into tshirt (description) values('S')
-insert into tshirt (description) values('M')
-insert into tshirt (description) values('L')
-insert into tshirt (description) values('XL')
+insert into size (description) values('S')
+insert into size (description) values('M')
+insert into size (description) values('L')
+insert into size (description) values('XL')
