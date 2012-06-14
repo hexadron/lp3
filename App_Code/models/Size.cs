@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 
-public abstract class Sizes
+public class Sizes
 {
     TshirtsDataContext db = new TshirtsDataContext();
     
@@ -20,4 +20,9 @@ public abstract class Sizes
             select s).ToList();
     }
 
+
+    public Sizes()
+    {
+        // TODO: Complete member initialization
+    }
 }
