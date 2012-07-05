@@ -1,4 +1,4 @@
-﻿#da-slider p {
+#da-slider p {
     color: #1A1D1D;
 }
 
@@ -36,13 +36,13 @@ span.img-polo{
 	width:20px;
 }
 
-span.img-ingresar{
-	background: url(../img/user.png) no-repeat;
+span.img-carrito{
+	background: url(../img/carrito.png) no-repeat;
 	background-size:20px 20px;
 	display:block;
 	float:right;
 	height:20px;
-	margin-left:20px;
+	margin-left:15px;
 	width:20px;
 }
 
@@ -137,6 +137,48 @@ ul#polo-contenedor{margin: 0 auto;width: 890px;position:relative;}
 ul#polo-contenedor li.zoom{display:inline;float:left;padding:20px 10px;}
 ul#polo-contenedor li.zoom figure{border:solid 1px #101113 ;border-radius:10px;background:#b9bdc5;}
 
+/*############################  DETALLE  ###########################*/
+ul#detalle{margin: 0 auto;width: 890px;position:relative;margin-top:10px;}
+ul#detalle li{float:left;float: left;}
+ul#detalle li h1{font-size:2.25em;margin: 40px 0;width:468px;}
+ul#detalle li  img{font-size:2.25em;margin: 25px 0;border:solid 3px #555;border-radius:5px;background:#bcbec1;margin-right: 40px;}
+ul#detalle li div.precio{font-size:2.1em;margin: 60px 0;}
+ul#detalle li div.tiempo{font-size:1.9em;margin: 60px 0;}
+ul#detalle li .agregar{font-size:1.9em;
+					margin: 20px 0;
+					border: solid 1px #333;
+					padding: 5px 20px;
+					-webkit-border-radius: 20px;
+					-moz-border-radius: 20px;
+					border-radius: 20px;
+					box-shadow: 3px 3px 6px #444;}
+ul#detalle li .agregar:hover{background:#1A1D1D;color:#eee;}	
+ul#detalle li .agregar:active{background:#1A1D1D;color:#eee;box-shadow:0px 0px 0px white;}					
+
+/*#######################    CONTACTO    #########################*/
+div.contacto,div.info{margin-top:40px;float:left;width:400px}
+div.contacto h3,div.info h3{font-size:1.9em;margin-bottom:30px;}
+div.contacto ul li,div.info ul li{margin:20px 0;}
+div.contacto ul li label{display:inline-block;width:120px;}
+div.contacto ul li textarea{margin: -20px 0px 0px 122px; width: 200px; height: 150px;}
+div.contacto ul li input[type="text"]{padding:4px 5px;}
+div.contacto ul li input[type="button"]{-webkit-border-radius: 5px;
+									-moz-border-radius: 5px;
+									-ms-border-radius: 5px;
+									-o-border-radius: 5px;
+									border-radius: 5px;
+									box-shadow: 3px 3px 6px #444;
+									background:#1A1D1D;color:#eee;
+									font-size:1.1em;
+									margin-left:15px;
+									margin-bottom:20px;
+									border: solid 1px #333;
+									padding: 5px 6px;}
+div.contacto ul li input[type="button"]:hover{background:#eee;color:#1A1D1D;}
+div.contacto ul li input[type="button"]:active{background:#eee;color:#1A1D1D;box-shadow:0px 0px 0px white;}
+div.contacto{margin-left:60px;}
+div.info{padding-left:90px;margin-left:5px;border-left:2px dotted #1A1D1D;}
+div.info ul li img{position:relative;top:10px;margin-right:15px;}
 
 /*##################    MANTENIMIENTO   ###########################*/
 h2.tit_article {text-align: center;font-size: 1.7em;margin: 25px 0;}
@@ -146,9 +188,42 @@ form.mantenimiento ul li input.boton{margin-left: 35px;}
 form.mantenimiento ul li label {margin-left: 35px;width: 150px;display: block;float: left;}
 figure.mantenimiento img {margin-top: 25px;}
 
-
-
-
+/*########################## CARRITO  ############################*/
+div.carrito{margin-left:35px;}
+div.carrito h1{margin-top: 35px;font-size: 2.3em;margin-bottom: 25px;}
+div.carrito table{border:solid 1px #1A1D1D;box-shadow: 3px 3px 10px #888;width:700px}
+div.carrito table tr{text-align:center;}
+div.carrito table tr:nth-child(2n+1){background:#dcdddf;}
+div.carrito table tr:first-child{background:#1A1D1D;}
+div.carrito table tr:first-child td{padding-top:15px;padding-bottom:15px;font-size:1.1em;font-weight:bold;color:#CCC;}
+div.carrito table tr td{padding:0 55px;}
+div.carrito .login {border:1px solid #1A1D1D;margin-top:25px;width:280px;box-shadow: 3px 3px 10px #888;float:left;margin-right:25px;background:#dcdddf;}
+div.carrito .login h3, div.carrito .pasarela h3{background:#1A1D1D;padding:15px 25px;color:#CCC;font-weight:bold;}
+div.carrito .login ul li label{display:block;margin-top:20px;font-size:1.1em;margin-left:20px;margin-bottom:5px;}
+div.carrito .login ul li input[type="button"]{-webkit-border-radius: 5px;
+											-moz-border-radius: 5px;
+											-ms-border-radius: 5px;
+											-o-border-radius: 5px;
+											border-radius: 5px;
+											box-shadow: 3px 3px 6px #444;
+											background:#1A1D1D;color:#eee;}
+div.carrito .login ul li input[type="button"]:hover{background:#eee;color:#1A1D1D;}
+div.carrito .login ul li input[type="button"]:active{background:#eee;color:#1A1D1D;box-shadow:0px 0px 0px white;}
+div.carrito .login ul li input {font-size:1.1em;
+							margin-left:35px;
+							margin-bottom:20px;
+							border: solid 1px #333;
+							padding: 5px 6px;}
+div.carrito .login ul li img{margin-left:160px;}
+div.carrito .pasarela{border:1px solid #1A1D1D;margin-top:25px;width:900px;box-shadow: 3px 3px 10px #888;float:left;background:#dcdddf;}							
+div.carrito .pasarela div{margin-top:20px;font-size:1.1em;margin-left:40px;margin-bottom:5px;float:left;}
+div.carrito .pasarela input{font-size:1.1em;
+							margin-top:15px;
+							margin-left:45px;
+							margin-bottom:20px;
+							padding: 5px 6px;}
+/*div.carrito ul li input:hover{background:#1A1D1D;color:#eee;}	
+div.carrito ul li input:active{background:#1A1D1D;color:#eee;box-shadow:0px 0px 0px white;}*/			
 /*###############################    FOOTER    ###############################*/
 
 footer{
