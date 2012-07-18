@@ -311,3 +311,36 @@ footer div.otros{float:right;margin-top:-120px;margin-right: 20px;}
     font-size: 2em;
     text-align: center;
 }
+
+.polo figure 
+{
+    position: relative;
+    width: 260px;
+}
+
+.polo .detail 
+{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.detail > *
+{
+    background-color: hsla(0, 0%, 0%, 0.6);
+    color: hsl(0, 0%, 98%);
+    padding: 0.4em;
+    text-align: center;
+}
+
+.add 
+{
+    background-color: hsl(0, 0%, 0%);
+    padding: 0.6em;
+    cursor: pointer;
+}
+
+.add:hover 
+{
+    text-decoration: underline;
+}

@@ -54,6 +54,11 @@
                     ErrorMessage="campo requerido"></asp:RequiredFieldValidator>
             </div>
         </li>
+        <li>
+            <label for="foto">Foto</label>
+            <input type='file' />
+            <asp:HiddenField ID="TxtFoto" runat="server" Value="" />
+        </li>
     </ul>
     <ul class="buttons">
         <li>

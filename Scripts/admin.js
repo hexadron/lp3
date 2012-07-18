@@ -17,9 +17,15 @@
         }
     })
 
+    var preventSubmit = function (evt) {
+        evt.preventDefault()
+    }
+
     $('input[type=file]').on('change', function (evt) {
+        $('form').on('submit', preventSubmit)
         upload(this.files[0], function (link) {
-            $('#ContentPlaceHolder1_TxtFoto').val(link);
+            $('#ContentPlaceHolder1_TxtFoto').val(link)
+            $('form').off('submit', preventSubmit)
         })
     })
 
@@ -46,7 +52,8 @@ function upload(file, callback) {
     xhr.onload = function () {
         // Big win!
         // The URL of the image is:
-        callback(JSON.parse(xhr.responseText).upload.links.imgur_page);
+        var upload = JSON.parse(xhr.responseText).upload;
+        callback(upload.links.original);
     }
     // Ok, I don't handle the errors. An exercice for the reader.
     // And now, we send the formdata

@@ -38,7 +38,8 @@ public partial class admin_polos_Editar : System.Web.UI.Page
                             TxtNombre.Text,
                             TxtDescripcion.Text,
                             DateTime.Parse(TxtTiempoExpiracion.Text),
-                            Decimal.Parse(TxtPrecio.Text));
+                            Decimal.Parse(TxtPrecio.Text),
+                            TxtFoto.Value);
 
                         if (saved)
                         {

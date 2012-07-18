@@ -1,21 +1,35 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.master" AutoEventWireup="true" CodeFile="Polos.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <form runat="server" id="addToCarrito">
+    <asp:HiddenField ID="item" Value="" runat="server" />
     <article>
 			<ul id="polo-contenedor">
-				<li class="zoom"><figure><img src="img/polos/super_foto1.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto2.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto3.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto4.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto5.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto6.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto1.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto2.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto3.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto4.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto6.png" alt="polo" width="200"/></figure></li>
-				<li class="zoom"><figure><img src="img/polos/super_foto1.png" alt="polo" width="200"/></figure></li>
+                <asp:Repeater ID="polosRepeater" runat="server">
+                    <ItemTemplate>
+                        <li class="zoom polo">
+                            <figure>
+                                <img src="<%# Eval("imagen") %>" />
+                                <div class="detail" data-shirt="<%# Eval("id") %>">
+                                    <h2 class="product-name">
+                                        <%# Eval("name") %>
+                                    </h2>
+                                    <h3 class="product-price">
+                                        S/. <%# Eval("price") %>
+                                    </h3>
+                                    <div class="product-time">
+                                        hasta el <%# ((DateTime) Eval("expire_time")).ToShortDateString() %>
+                                    </div>
+                                    <div class="add">
+                                        Agregar al Carrito
+                                    </div>
+                                </div>
+                            </figure>
+                        </li>
+                    </ItemTemplate>
+                </asp:Repeater>
 			</ul>						
 		</article>
+        </form>
 </asp:Content>
 

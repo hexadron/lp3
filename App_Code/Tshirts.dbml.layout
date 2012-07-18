@@ -2,49 +2,49 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Tshirts">
   <DataContextMoniker Name="/TshirtsDataContext" />
   <nestedChildShapes>
-    <classShape Id="b56f61ec-bc17-410e-a336-641e795fd6a4" absoluteBounds="0.75, 1, 2, 1.5785953776041664">
+    <classShape Id="8a4543c0-b2bf-45be-9c71-0e24822a3e9d" absoluteBounds="0.75, 1, 2, 1.5785953776041664">
       <DataClassMoniker Name="/TshirtsDataContext/client" />
       <nestedChildShapes>
-        <elementListCompartment Id="f5952da9-b783-4d98-a2fe-86552fb6aab8" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6f3058a6-bbca-4fd3-883c-c924eb79e38b" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="3722c62d-9ef0-44b5-b771-294751e657f1" absoluteBounds="3.5, 4.75, 2, 2.1554996744791666">
+    <classShape Id="1d85fdbc-1267-463d-8cae-ef7c47d1a608" absoluteBounds="3.5, 4.75, 2, 2.1554996744791666">
       <DataClassMoniker Name="/TshirtsDataContext/tshirt" />
       <nestedChildShapes>
-        <elementListCompartment Id="2bcb9de3-8cde-4910-8801-c5bea7266358" absoluteBounds="3.515, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="23064343-e78a-4745-be65-32a02fe8ec4d" absoluteBounds="3.515, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="3bd7b798-f598-41d5-a3d3-89fe996f4285" absoluteBounds="6.25, 0.875, 2, 1.7708968098958329">
+    <classShape Id="c06aa467-3ced-4a97-917b-2d4f7430453f" absoluteBounds="6.25, 0.875, 2, 1.7708968098958329">
       <DataClassMoniker Name="/TshirtsDataContext/item" />
       <nestedChildShapes>
-        <elementListCompartment Id="d0cd50a7-ebc5-498b-b583-18dc6ce888ab" absoluteBounds="6.265, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d16256ac-a022-4d73-bd36-105f2311b0df" absoluteBounds="6.265, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4905c5ca-b175-4157-b229-2a93a7252cc3" absoluteBounds="3.5, 1, 2, 1.5785953776041666">
+    <classShape Id="bcc6ecc3-7a31-4a17-ac60-37e42ed7a2da" absoluteBounds="3.5, 1, 2, 1.5785953776041666">
       <DataClassMoniker Name="/TshirtsDataContext/sellOrder" />
       <nestedChildShapes>
-        <elementListCompartment Id="93645858-f289-47e9-acf0-f123313913d4" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="18adef29-1077-48ca-9760-66b1dc82758e" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <associationConnector edgePoints="[(5.5 : 5.82774983723958); (7.25 : 5.82774983723958); (7.25 : 2.64589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/TshirtsDataContext/tshirt/tshirt_item" />
       <nodes>
-        <classShapeMoniker Id="3722c62d-9ef0-44b5-b771-294751e657f1" />
-        <classShapeMoniker Id="3bd7b798-f598-41d5-a3d3-89fe996f4285" />
+        <classShapeMoniker Id="1d85fdbc-1267-463d-8cae-ef7c47d1a608" />
+        <classShapeMoniker Id="c06aa467-3ced-4a97-917b-2d4f7430453f" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(5.5 : 1.78929768880208); (6.25 : 1.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/TshirtsDataContext/sellOrder/sellOrder_item" />
       <nodes>
-        <classShapeMoniker Id="4905c5ca-b175-4157-b229-2a93a7252cc3" />
-        <classShapeMoniker Id="3bd7b798-f598-41d5-a3d3-89fe996f4285" />
+        <classShapeMoniker Id="bcc6ecc3-7a31-4a17-ac60-37e42ed7a2da" />
+        <classShapeMoniker Id="c06aa467-3ced-4a97-917b-2d4f7430453f" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 1.78929768880208); (3.5 : 1.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/TshirtsDataContext/client/client_sellOrder" />
       <nodes>
-        <classShapeMoniker Id="b56f61ec-bc17-410e-a336-641e795fd6a4" />
-        <classShapeMoniker Id="4905c5ca-b175-4157-b229-2a93a7252cc3" />
+        <classShapeMoniker Id="8a4543c0-b2bf-45be-9c71-0e24822a3e9d" />
+        <classShapeMoniker Id="bcc6ecc3-7a31-4a17-ac60-37e42ed7a2da" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

@@ -39,6 +39,13 @@ public static class Tshirts
                 select s).ToList();
     }
 
+    public static List<tshirt> not_expired()
+    {
+        return (from s in db.tshirts
+                where s.expire_time > DateTime.Now.Date
+                select s).ToList();
+    }
+
     public static void delete(int id)
     {
         var shirt = (from dshirt in db.tshirts
@@ -50,7 +57,7 @@ public static class Tshirts
     }
 
     public static bool update(int id, string _name, string _description,
-        DateTime _expire_time, decimal _price)
+        DateTime _expire_time, decimal _price, string _foto = "")
     {
         var shirt = (from dshirt in db.tshirts
                      where dshirt.id == id
@@ -60,6 +67,7 @@ public static class Tshirts
         shirt.description = _description;
         shirt.expire_time = _expire_time;
         shirt.price = _price;
+        shirt.imagen = _foto;
 
         db.SubmitChanges();
 

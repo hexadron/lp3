@@ -74,20 +74,6 @@
 		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="Scripts/jquery.cslider.js"></script>
-        <script type="text/javascript" src="Scripts/jquery.zoomooz.min.js"></script>
 		<script type="text/javascript" src="Scripts/funciones.js"></script>	
-         <script type="text/javascript">
-             $(document).ready(function () {
-                 $(".zoom").click(function (evt) {
-                     evt.stopPropagation();
-                     $(this).zoomTo();
-                 });
-                 $(window).click(function (evt) {
-                     evt.stopPropagation();
-                     $("body").zoomTo();
-                 });
-                 $("body").zoomTo();
-             });
-		</script>
 	</body>
 </html>
