@@ -25,7 +25,7 @@
 						<li><span class="separador"></span></li>
 						<li><a href="Polos.aspx">Polos<span class="img-polo"></span></a></li>
 						<li><span class="separador"></span></li>
-						<li><a href="#">Ingresar<span class="img-ingresar"></span></a></li>
+                        <li><asp:HyperLink ID="linkingreso" runat="server" NavigateUrl="Login.aspx" Text="Ingresar<span class='img-ingresar'></span>"></asp:HyperLink></li>
 					</ul>
 				</nav>
 			</div>			

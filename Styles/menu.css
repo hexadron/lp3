@@ -162,7 +162,7 @@ div.contacto ul li,div.info ul li{margin:20px 0;}
 div.contacto ul li label{display:inline-block;width:120px;}
 div.contacto ul li textarea{margin: -20px 0px 0px 122px; width: 200px; height: 150px;}
 div.contacto ul li input[type="text"]{padding:4px 5px;}
-div.contacto ul li input[type="button"]{-webkit-border-radius: 5px;
+div.contacto ul li input[type="submit"]{-webkit-border-radius: 5px;
 									-moz-border-radius: 5px;
 									-ms-border-radius: 5px;
 									-o-border-radius: 5px;
@@ -174,8 +174,8 @@ div.contacto ul li input[type="button"]{-webkit-border-radius: 5px;
 									margin-bottom:20px;
 									border: solid 1px #333;
 									padding: 5px 6px;}
-div.contacto ul li input[type="button"]:hover{background:#eee;color:#1A1D1D;}
-div.contacto ul li input[type="button"]:active{background:#eee;color:#1A1D1D;box-shadow:0px 0px 0px white;}
+div.contacto ul li input[type="submit"]:hover{background:#eee;color:#1A1D1D;}
+div.contacto ul li input[type="submit"]:active{background:#eee;color:#1A1D1D;box-shadow:0px 0px 0px white;}
 div.contacto{margin-left:60px;}
 div.info{padding-left:90px;margin-left:5px;border-left:2px dotted #1A1D1D;}
 div.info ul li img{position:relative;top:10px;margin-right:15px;}
@@ -197,27 +197,27 @@ div.carrito table tr:nth-child(2n+1){background:#dcdddf;}
 div.carrito table tr:first-child{background:#1A1D1D;}
 div.carrito table tr:first-child td{padding-top:15px;padding-bottom:15px;font-size:1.1em;font-weight:bold;color:#CCC;}
 div.carrito table tr td{padding:0 55px;}
-div.carrito .login {border:1px solid #1A1D1D;margin-top:25px;width:280px;box-shadow: 3px 3px 10px #888;float:left;margin-right:25px;background:#dcdddf;}
-div.carrito .login h3, div.carrito .pasarela h3{background:#1A1D1D;padding:15px 25px;color:#CCC;font-weight:bold;}
-div.carrito .login ul li label{display:block;margin-top:20px;font-size:1.1em;margin-left:20px;margin-bottom:5px;}
-div.carrito .login ul li input[type="button"]{-webkit-border-radius: 5px;
+.login {border:1px solid #1A1D1D;margin-top:25px;width:280px;box-shadow: 3px 3px 10px #888;float:left;margin-right:25px;background:#dcdddf;}
+.login h3, .pasarela h3{background:#1A1D1D;padding:15px 25px;color:#CCC;font-weight:bold;}
+.login ul li label{display:block;margin-top:20px;font-size:1.1em;margin-left:20px;margin-bottom:5px;}
+.login ul li input[type="submit"]{-webkit-border-radius: 5px;
 											-moz-border-radius: 5px;
 											-ms-border-radius: 5px;
 											-o-border-radius: 5px;
 											border-radius: 5px;
 											box-shadow: 3px 3px 6px #444;
 											background:#1A1D1D;color:#eee;}
-div.carrito .login ul li input[type="button"]:hover{background:#eee;color:#1A1D1D;}
-div.carrito .login ul li input[type="button"]:active{background:#eee;color:#1A1D1D;box-shadow:0px 0px 0px white;}
-div.carrito .login ul li input {font-size:1.1em;
+.login ul li input[type="submit"]:hover{background:#eee;color:#1A1D1D;}
+.login ul li input[type="submit"]:active{background:#eee;color:#1A1D1D;box-shadow:0px 0px 0px white;}
+.login ul li input {font-size:1.1em;
 							margin-left:35px;
 							margin-bottom:20px;
 							border: solid 1px #333;
 							padding: 5px 6px;}
-div.carrito .login ul li img{margin-left:160px;}
-div.carrito .pasarela{border:1px solid #1A1D1D;margin-top:25px;width:900px;box-shadow: 3px 3px 10px #888;float:left;background:#dcdddf;}							
-div.carrito .pasarela div{margin-top:20px;font-size:1.1em;margin-left:40px;margin-bottom:5px;float:left;}
-div.carrito .pasarela input{font-size:1.1em;
+.login ul li img{margin-left:160px;}
+.pasarela{border:1px solid #1A1D1D;margin-top:25px;width:900px;box-shadow: 3px 3px 10px #888;float:left;background:#dcdddf;}							
+.pasarela div{margin-top:20px;font-size:1.1em;margin-left:40px;margin-bottom:5px;float:left;}
+.pasarela input{font-size:1.1em;
 							margin-top:15px;
 							margin-left:45px;
 							margin-bottom:20px;
@@ -285,3 +285,29 @@ footer div.suscribete{margin: 0 auto;}
 footer div.suscribete input{width:100px;border-radius:5px;padding:2px 8px;margin:2px 4px;}
 footer div.suscribete .btn{width:100px;border-radius:5px;padding:2px 8px;margin:2px 4px;background:#159;}
 footer div.otros{float:right;margin-top:-120px;margin-right: 20px;}
+
+#loginsignup 
+{
+    text-align: center;   
+}
+
+#loginsignup > li
+{
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+
+#login.login, #signup.login
+{
+    float: none;
+    margin-right: 0px;
+}
+
+#o 
+{
+    padding: 5em 1em 0em 1em;
+    font-size: 2em;
+    text-align: center;
+}

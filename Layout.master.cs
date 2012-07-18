@@ -12,15 +12,18 @@ public partial class Layout : System.Web.UI.MasterPage
         Func<int, int> hola = x => x * x;
     }
 
-    public void ingreso(string usuario)
+    protected void Page_Init(object sender, EventArgs e)
     {
-        if (usuario.Trim().Length == 0)
+        if (Session["current_user"] == null)
         {
-            Response.Redirect("Login.aspx");
+            linkingreso.Text = "Ingresar<span class='img-ingresar'></span>";
+            linkingreso.NavigateUrl = "/lp3/Login.aspx";
         }
         else
         {
-            // mostrar usuario
+            linkingreso.Text = "Salir<span class='img-ingresar'></span>";
+            linkingreso.NavigateUrl = "/lp3/Logout.aspx";
         }
     }
+
 }

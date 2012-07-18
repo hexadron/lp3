@@ -9,6 +9,6 @@ public partial class Objetivos : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Master.ingreso(Session["usuario"].ToString());
+     
     }
 }
