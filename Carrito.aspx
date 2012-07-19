@@ -5,35 +5,22 @@
 			<div class="carrito">
 				<h1>Carrito<img src="img/carrito.png" alt="carrito" width="30"/></h1>
 				<table width="700">
-					<tr>
-						<td></td>
-						<td>Nombres</td>
-						<td>Precio</td>
-						<td>Cantidad</td>
-						<td>Total</td>
-					</tr>
-					<tr>
-						<td><img src="img/polos/super_foto1.png" alt="foto1" width="70"/></td>
-						<td>Polo 1</td>
-						<td>S/.20.00</td>
-						<td>1</td>
-						<td>S/.20.00</td>
-					</tr>
-					<tr>
-						<td><img src="img/polos/super_foto2.png" alt="foto1" width="70"/></td>
-						<td>Polo 2</td>
-						<td>S/.15.00</td>
-						<td>2</td>
-						<td>S/.30.00</td>
-					</tr>
-					<tr>
-						<td><img src="img/polos/super_foto4.png" alt="foto1" width="70"/></td>
-						<td>Polo 4</td>
-						<td>S/.18.00</td>
-						<td>1</td>
-						<td>S/.18.00</td>
-					</tr>
-				</table>
+				    <tr>
+					    <td></td>
+						    <td>Nombre</td>
+						    <td>Precio</td>
+					    </tr>
+                     
+                <asp:Repeater ID="carritoRepeater" runat="server">
+                       <ItemTemplate>
+					        <tr>
+						        <td><img src="<%# Eval("imagen") %>" alt="foto1" width="70"/></td>
+						        <td><%# Eval("name")%></td>
+						        <td>S/. <%# Eval("price")%></td>
+					        </tr>    
+                        </ItemTemplate>
+                </asp:Repeater>
+                </table>
 				<div class="login">
 					<ul>
 						<li><h3>¿Aún no tienes una cuenta?</h3></li>
@@ -61,8 +48,8 @@
 				</div>
 				<div class="pasarela">
 					<h3>Modo de Pago</h3>
-					<div>Cantidad: <label>4</label></div>
-					<div>Total: <label>S/.68.00</label></div>
+					<div>Cantidad: <asp:Label ID="cantidad" runat="server" Text="0"></asp:Label></div>
+					<div>Total: S/.<asp:Label ID="precio" runat="server" Text="0"></asp:Label></div>
 					<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" />
 				</div>
 			</div>

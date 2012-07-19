@@ -13,7 +13,7 @@ public class CarItem
 
 	public CarItem(int shirt)
 	{
-		
+        this.shirt = shirt;
 	}
 
     public int add(int qty)

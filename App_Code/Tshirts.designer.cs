@@ -41,7 +41,7 @@ public partial class TshirtsDataContext : System.Data.Linq.DataContext
   #endregion
 	
 	public TshirtsDataContext() : 
-			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["tshirtsConnectionString1"].ConnectionString, mappingSource)
+			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["tshirtsConnectionString2"].ConnectionString, mappingSource)
 	{
 		OnCreated();
 	}

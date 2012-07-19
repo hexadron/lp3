@@ -33,6 +33,13 @@ public static class Tshirts
         return shirt.expire_time > DateTime.Now;
     }
 
+    public static tshirt find(int id)
+    {
+        return (from dshirt in db.tshirts
+                where dshirt.id == id
+                select dshirt).Single();
+    }
+
     public static List<tshirt> all()
     {
         return (from s in db.tshirts
