@@ -25,7 +25,8 @@ public partial class Default2 : System.Web.UI.Page
             {
                 List<CarItem> cart = (List<CarItem>)Session["cart"];
 
-                var repeated = cart.FindAll(i => i.shirt == idShirt);
+                var repeated = cart.FindAll(i =>
+                    i.shirt.id == idShirt);
 
                 if (repeated.Count > 0)
                 {

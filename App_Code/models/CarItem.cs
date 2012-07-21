@@ -8,12 +8,13 @@ using System.Web;
 /// </summary>
 public class CarItem
 {
-    public int shirt { get; set; }
     public int qty { get; set; }
+    public tshirt shirt { get; set; } 
 
 	public CarItem(int shirt)
 	{
-        this.shirt = shirt;
+        this.shirt = Tshirts.find(shirt);
+        this.qty = 1;
 	}
 
     public int add(int qty)

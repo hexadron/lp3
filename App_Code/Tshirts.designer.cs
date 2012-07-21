@@ -41,7 +41,7 @@ public partial class TshirtsDataContext : System.Data.Linq.DataContext
   #endregion
 	
 	public TshirtsDataContext() : 
-			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["tshirtsConnectionString2"].ConnectionString, mappingSource)
+			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["tshirtsConnectionString3"].ConnectionString, mappingSource)
 	{
 		OnCreated();
 	}
@@ -281,8 +281,6 @@ public partial class tshirt : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private System.Nullable<decimal> _price;
 	
-	private System.Nullable<bool> _expired;
-	
 	private string _imagen;
 	
     #region Extensibility Method Definitions
@@ -299,8 +297,6 @@ public partial class tshirt : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OndescriptionChanged();
     partial void OnpriceChanging(System.Nullable<decimal> value);
     partial void OnpriceChanged();
-    partial void OnexpiredChanging(System.Nullable<bool> value);
-    partial void OnexpiredChanged();
     partial void OnimagenChanging(string value);
     partial void OnimagenChanged();
     #endregion
@@ -406,26 +402,6 @@ public partial class tshirt : INotifyPropertyChanging, INotifyPropertyChanged
 				this._price = value;
 				this.SendPropertyChanged("price");
 				this.OnpriceChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_expired", DbType="Bit")]
-	public System.Nullable<bool> expired
-	{
-		get
-		{
-			return this._expired;
-		}
-		set
-		{
-			if ((this._expired != value))
-			{
-				this.OnexpiredChanging(value);
-				this.SendPropertyChanging();
-				this._expired = value;
-				this.SendPropertyChanged("expired");
-				this.OnexpiredChanged();
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tshirts" Class="TshirtsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=WINDOWS\SQLEXPRESS;Initial Catalog=tshirts;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="tshirtsConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=JULIO-PC;Initial Catalog=tshirts;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="tshirtsConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.client" Member="clients">
     <Type Name="client">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -16,7 +16,6 @@
       <Column Name="name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="description" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="expired" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="imagen" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Association Name="tshirt_item" Member="items" ThisKey="id" OtherKey="tshirt_id" Type="item" />
     </Type>

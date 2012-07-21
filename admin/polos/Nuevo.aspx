@@ -57,6 +57,9 @@ Registrar polo
         <li>
             <input class="main" type="submit" value="Guardar" />
         </li>
+        <li>
+            <div id="loader"></div>
+        </li>
     </ul>
 </form>
 </asp:Content>

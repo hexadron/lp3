@@ -17,8 +17,8 @@
                                     <h3 class="product-price">
                                         S/. <%# Eval("price") %>
                                     </h3>
-                                    <div class="product-time">
-                                        hasta el <%# ((DateTime) Eval("expire_time")).ToShortDateString() %>
+                                    <div class="product-time" data-expirein="<%# ((DateTime) Eval("expire_time")).ToShortDateString() %>">
+                                        expira en <span class="experin"></span>
                                     </div>
                                     <div class="add">
                                         Agregar al Carrito

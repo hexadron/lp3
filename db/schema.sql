@@ -24,7 +24,6 @@ create table tshirt (
 	name varchar(255),
 	description varchar(255),
 	price decimal,
-	expired bit,
 	imagen varchar(255)
 )
 go

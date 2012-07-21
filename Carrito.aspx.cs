@@ -7,28 +7,61 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
+    protected void Page_Init(object sender, EventArgs e)
+    {
+        if (Session["current_user"] != null)
+        {
+            logPanel.Visible = false;
+        }
+        else
+        {
+            
+        }
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
         {
             List<CarItem> cart = (List<CarItem>) Session["cart"];
             var cantidadTotal = 0;
-            var precioTotal = 0;
-            var polos = new List<tshirt>();
+            decimal precioTotal = 0;
             foreach (CarItem c in cart)
             {
-                tshirt polo = Tshirts.find(c.shirt);
-                polos.Add(polo);
-                cantidadTotal += 1;
-                precioTotal += Convert.ToInt32(polo.price);
+                cantidadTotal += c.qty;
+                precioTotal += (decimal)c.shirt.price * (decimal)c.qty;
             }
-            carritoRepeater.DataSource = polos;
+            carritoRepeater.DataSource = cart;
             carritoRepeater.DataBind();
             precio.Text = precioTotal.ToString();
             cantidad.Text = cantidadTotal.ToString();
         }
         else
         {
+            var cart = (List<CarItem>)Session["cart"];
+            var forDelete = new List<CarItem>();
+
+            foreach (RepeaterItem r in carritoRepeater.Items)
+            {
+                var qty = int.Parse((r.FindControl("qty") as TextBox).Text);
+                var id = int.Parse((r.FindControl("itemShirt") as HiddenField).Value);
+
+                var item = cart.Find(cItem => cItem.shirt.id == id);
+
+                item.qty = qty;
+
+                if (item.qty == 0)
+                {
+                    forDelete.Add(item);
+                }
+            }
+
+            foreach (var sentenced in forDelete)
+            {
+                cart.Remove(sentenced);
+            }
+
+            Response.Redirect(Request.UrlReferrer.AbsolutePath);
         }
     }
 }
