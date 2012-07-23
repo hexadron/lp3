@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Globalization;
 
 public static class Tshirts
 {
@@ -48,9 +49,12 @@ public static class Tshirts
 
     public static List<tshirt> not_expired()
     {
+        DateTimeFormatInfo  format = new DateTimeFormatInfo();
+        format.ShortDatePattern = "MM/dd/yyyy";
+        DateTime now = Convert.ToDateTime(DateTime.Now.Date, format); 
         return (from s in db.tshirts
-                where s.expire_time > DateTime.Now.Date
-                select s).ToList();
+                where s.expire_time > now
+                select  s).ToList();
     }
 
     public static void delete(int id)

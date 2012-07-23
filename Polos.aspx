@@ -2,8 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form runat="server" id="addToCarrito">
-    <asp:HiddenField ID="item" Value="" runat="server" />
+   
     <article>
+     <asp:HiddenField ID="item" Value="" runat="server" />
 			<ul id="polo-contenedor">
                 <asp:Repeater ID="polosRepeater" runat="server">
                     <ItemTemplate>

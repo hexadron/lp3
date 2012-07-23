@@ -22,7 +22,7 @@ public partial class admin_polos_Nuevo : System.Web.UI.Page
             {
                 tshirt shirt = Tshirts.create(TxtNombre.Text,
                     TxtDescripcion.Text,
-                    DateTime.Parse(TxtTiempoExpiracion.Text),
+                    date,
                     Decimal.Parse(TxtPrecio.Text),
                     TxtFoto.Value);
 

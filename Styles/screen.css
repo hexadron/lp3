@@ -73,7 +73,7 @@ body {
 #wrapper {
   margin: auto;
   overflow: auto;
-  width: 984px;
+  width: 1200px;
 }
 
 /* line 12, ../sass/screen.sass */
@@ -157,7 +157,7 @@ body {
 .content-wrapper {
   position: relative;
   left: 320px;
-  width: 640px;
+  width: 830px;
   margin: 0 10px;
 }
 
@@ -280,7 +280,8 @@ th
 
 td 
 {
-    padding: 0.75em
+    padding: 0.65em;
+
 }
 
 .select_button a

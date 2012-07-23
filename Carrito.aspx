@@ -32,43 +32,20 @@
                 </asp:Repeater>
                 </table>
 
-                <asp:Button id="updateCart" runat="server" Text="Actualizar Monto" />
+                <asp:Button id="updateCart" runat="server" Text="Actualizar Monto" 
+                    onclick="updateCart_Click" />
 
-                
+                <asp:Panel ID="logPanel" runat="server">
+				    <asp:Button id="logueo" runat="server" Text="Logueate para continuar >>" 
+                        onclick="logueo_Click" />
+                </asp:Panel>
+              
                 <asp:Panel ID="Pasarela" runat="server">
 				<div class="pasarela">
 					<h3>Modo de Pago</h3>
 					<div>Cantidad: <asp:Label ID="cantidad" runat="server" Text="0"></asp:Label></div>
 					<div>Total: S/.<asp:Label ID="precio" runat="server" Text="0"></asp:Label></div>
 					<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" />
-				</div>
-                </asp:Panel>
-
-                <asp:Panel ID="logPanel" runat="server">
-				<div class="login">
-					<ul>
-						<li><h3>¿Aún no tienes una cuenta?</h3></li>
-						<li><label>Nombre</label><input type="text" name="txtNombre"/></li>
-						<li><label>Correo</label><input type="email" name="txtEmail"/><li>
-						<li><label>Contraseña</label><input type="password" name="txtPassword"/></li>
-						<li><input type="button" value="registrar"/></li>
-					</ul>
-				</div>
-				<div class="login">
-					<ul>
-						<li><h3>Ingresa con tu cuenta</h3></li>
-						<li><label>Correo</label><input type="email"/><li>
-						<li><label>Contraseña</label><input type="password"/></li>
-						<li><input type="button" value="ingresar"/></li>
-					</ul>
-				</div>
-				<div class="login">
-					<ul>
-						<li><h3>¿Olvidaste tu contraseña?</h3></li>
-						<li><label>Correo</label><input type="email"/><li>
-						<li><input type="button" value="recuperar"/></li>
-						<li><img width="100" src="img/candado.png" alt="recuperar" title="recueprar"></li>
-					</ul>
 				</div>
                 </asp:Panel>
 			</div>

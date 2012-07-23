@@ -110,7 +110,7 @@ article
 	width: 960px;
 	margin: 0px auto 20px auto;
 }
-ul#contenedor{position:relative;}
+ul#contenedor{position:relative;height: 560px;}
 li#redes,li#productos{display:inline;float:left;}
 ul#contenedor li#redes{width:290px;position: absolute;top: 0px;left: 650px;margin-left: 10px;}
 ul#contenedor li#productos{width:630px;}
@@ -120,10 +120,12 @@ ul li.principales h3{font-size:1.3em;padding: 8px 20px;}
 ul li.principales figure{margin: 10px 15px;}
 ul li.principales {margin-bottom: 210px;}
 
-.thumb{	border: 8px solid #adacae;position:relative;overflow:hidden;border-radius:5px;}
+.thumb{	border: 8px solid #adacae;position:relative;overflow:hidden;border-radius:5px;width:150px;}
 .thumb section{	background: #000;padding:10px;height:140px;}
 .thumb p{	line-height:18px;}
 .thumb img{	position:absolute;left:-14px;background:#000;}
+.thumb h2{height: 84px;display: block;overflow: hidden;}
+
 
 #twitter, #facebook{width:50px;}
 #twitter ul li, #facebook ul li{display:inline; float:left;padding:15px 0;}

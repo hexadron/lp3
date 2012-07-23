@@ -61,12 +61,11 @@ public partial class admin_polos_Editar : System.Web.UI.Page
 
             var id = int.Parse(row.Cells[1].Text);
             var expTime = row.Cells[2].Text.Split(' ').First().Split('/');
+            DateTime date;
 
-            DateTime date = new DateTime(
-                int.Parse(expTime[2]),
-                int.Parse(expTime[0]),
-                int.Parse(expTime[1])
-            );
+            bool result = (DateTime.TryParseExact(row.Cells[2].Text,
+                "MM/dd/yyyy", CultureInfo.InvariantCulture,
+                DateTimeStyles.None, out date));
 
             TxtTiempoExpiracion.Text = twoDigits(expTime[0]) + '/' + expTime[1] + '/' + expTime[2];
             TxtNombre.Text = row.Cells[3].Text;

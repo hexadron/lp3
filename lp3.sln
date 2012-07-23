@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "lp3", ".", "{07FAC6EE-9C4A-46E4-8ABF-639893561492}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "lp3", ".", "{04368D04-E779-4DFB-A4DB-A18BF28B8D63}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/lp3"
@@ -26,8 +26,8 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{07FAC6EE-9C4A-46E4-8ABF-639893561492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07FAC6EE-9C4A-46E4-8ABF-639893561492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04368D04-E779-4DFB-A4DB-A18BF28B8D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04368D04-E779-4DFB-A4DB-A18BF28B8D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

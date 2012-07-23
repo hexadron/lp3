@@ -26,7 +26,15 @@ public partial class Login : System.Web.UI.Page
 
         if (cli != null)
         {
-            Response.Redirect("Index.aspx");
+            if (Request.Cookies["carrito"] != null)
+            {
+                Response.Redirect("Carrito.aspx");
+            }
+            else 
+            {
+                Response.Redirect("Index.aspx");
+            }
+           
         }
 
     }
@@ -45,7 +53,14 @@ public partial class Login : System.Web.UI.Page
             }
             else
             {
-                Response.Redirect("Index.aspx");
+                if (Request.Cookies["carrito"] != null)
+                {
+                    Response.Redirect("Carrito.aspx");
+                }
+                else
+                {
+                    Response.Redirect("Index.aspx");
+                }
             }
         }
     }

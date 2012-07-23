@@ -21,9 +21,10 @@
 				<h1 class="titulo"><a href="Index.aspx">Polet</a></h1>
 				<nav id="menu">
 					<ul>
-						<li><input type="text" id="buscar" placeholder="Buscar"/><span class="img-buscar"></span></li>
-						<li><span class="separador"></span></li>
+
 						<li><a href="Polos.aspx">Polos<span class="img-polo"></span></a></li>
+                        <li><span class="separador"></span></li>
+						<li><a href="Carrito.aspx"">Carrito<span class="img-carrito"></span></a></li>
 						<li><span class="separador"></span></li>
                         <li><asp:HyperLink ID="linkingreso" runat="server" NavigateUrl="Login.aspx" Text="Ingresar<span class='img-ingresar'></span>"></asp:HyperLink></li>
 					</ul>
