@@ -22,46 +22,52 @@ public partial class Login : System.Web.UI.Page
 
     protected void btnSignup_Click(object sender, EventArgs e)
     {
-        var cli = Client.create(scorreo.Text, spassword.Text);
+        if (scorreo.Text == "" || spassword.Text == "") { } else {
+            var cli = Client.create(scorreo.Text, spassword.Text);
 
-        if (cli != null)
-        {
-            if (Request.Cookies["carrito"] != null)
+            if (cli != null)
             {
-                Response.Redirect("Carrito.aspx");
-            }
-            else 
-            {
-                Response.Redirect("Index.aspx");
-            }
+                if (Request.Cookies["carrito"] != null)
+                {
+                    Response.Redirect("Carrito.aspx");
+                }
+                else 
+                {
+                    Response.Redirect("Index.aspx");
+                }
            
+            }
         }
 
     }
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        client authenticated = 
-            Client.authenticate(lemail.Text, lpassword.Text);
-
-        if (authenticated != null)
+        if (lemail.Text == "" || lpassword.Text=="") { }
+        else
         {
-            Session["current_user"] = authenticated;
-            if (authenticated.is_admin)
+            client authenticated = 
+                Client.authenticate(lemail.Text, lpassword.Text);
+
+            if (authenticated != null)
             {
-                Response.Redirect("admin/polos/index.aspx");
-            }
-            else
-            {
-                if (Request.Cookies["carrito"] != null)
+                Session["current_user"] = authenticated;
+                if (authenticated.is_admin)
                 {
-                    Response.Redirect("Carrito.aspx");
+                    Response.Redirect("admin/polos/index.aspx");
                 }
                 else
                 {
-                    Response.Redirect("Index.aspx");
+                    if (Request.Cookies["carrito"] != null)
+                    {
+                        Response.Redirect("Carrito.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect("Index.aspx");
+                    }
                 }
             }
-        }
+       }
     }
 }
