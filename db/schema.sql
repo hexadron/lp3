@@ -30,9 +30,11 @@ go
 
 create table sellOrder (
 	id int not null primary key identity,
-	client_id int not null references client,
+	client_id int references client,
 	ordered_at datetime default GETDATE(),
-	total decimal
+	total decimal,
+	shipping_address varchar(255),
+	billing_address varchar(255)
 )
 go
 

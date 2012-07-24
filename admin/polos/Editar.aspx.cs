@@ -71,6 +71,7 @@ public partial class admin_polos_Editar : System.Web.UI.Page
             TxtNombre.Text = row.Cells[3].Text;
             TxtDescripcion.Text = row.Cells[4].Text;
             TxtPrecio.Text = row.Cells[5].Text;
+            TxtFoto.Value = row.Cells[6].Text;
         }
     }
 

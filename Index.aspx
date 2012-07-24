@@ -7,7 +7,7 @@
 				<div class="da-slide" data-shirt="<%# Eval("id") %>" >
 					<h2> <%# Eval("name") %></h2>
 					<p >A solo  S/. <%# Eval("price") %> el polo cerrará en <span class="experin"></span></p>
-					<a href="#" class="da-link">Comprar</a>
+					<a href="Detalle.aspx?id=<%# Eval("id") %>" class="da-link">Ver m&aacute;s</a>
 					<div class="da-img"><img src="<%# Eval("imagen") %>" alt="image01" /></div>
 				</div>
               </ItemTemplate>
@@ -31,7 +31,7 @@
 									<section>
 										<h2> <%# Eval("name") %></h2>
 										<p>A solo  S/. <%# Eval("price") %></p>
-										<a href="#" class="btn">Comprar</a>
+										<a href="Detalle.aspx?id=<%# Eval("id") %>" class="btn">Ver m&aacute;s</a>
 									</section>
 								</figure>
                              </ItemTemplate>

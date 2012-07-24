@@ -45,7 +45,7 @@ public class Client
     {
         return (from cli in db.clients
                 where cli.email == email && cli.password == password
-                select cli).Single();
+                select cli).SingleOrDefault();
         
     }
 }

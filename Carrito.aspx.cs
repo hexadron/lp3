@@ -28,6 +28,12 @@ public partial class _Default : System.Web.UI.Page
             List<CarItem> cart = (List<CarItem>) Session["cart"];
             var cantidadTotal = 0;
             decimal precioTotal = 0;
+
+            if (cart == null)
+            {
+                Session["cart"] = new List<CarItem>();
+            }
+
             foreach (CarItem c in cart)
             {
                 cantidadTotal += c.qty;
@@ -37,6 +43,8 @@ public partial class _Default : System.Web.UI.Page
             carritoRepeater.DataBind();
             precio.Text = precioTotal.ToString();
             cantidad.Text = cantidadTotal.ToString();
+                
+            total.Text = precioTotal.ToString();
         }
         else
         {
@@ -82,8 +90,10 @@ public partial class _Default : System.Web.UI.Page
             carritoRepeater.DataBind();
             precio.Text = precioTotal.ToString();
             cantidad.Text = cantidadTotal.ToString();
+            total.Text = precioTotal.ToString();
         }
     }
+
     protected void logueo_Click(object sender, EventArgs e)
     {
         HttpCookie page = new HttpCookie("carrito");
@@ -91,6 +101,7 @@ public partial class _Default : System.Web.UI.Page
         Response.Cookies.Add(page);
         Response.Redirect("Login.aspx");
     }
+
     protected void updateCart_Click(object sender, EventArgs e)
     {
 

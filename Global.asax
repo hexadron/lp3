@@ -23,6 +23,7 @@
 
     void Session_Start(object sender, EventArgs e) 
     {
+        Session.Timeout = 1440;
         Session["cart"] = new List<CarItem>();
     }
 

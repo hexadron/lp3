@@ -142,7 +142,7 @@ ul#polo-contenedor li.zoom figure{border:solid 1px #101113 ;border-radius:10px;b
 /*############################  DETALLE  ###########################*/
 ul#detalle{margin: 0 auto;width: 890px;position:relative;margin-top:10px;}
 ul#detalle li{float:left;float: left;}
-ul#detalle li h1{font-size:2.25em;margin: 40px 0;width:468px;}
+ul#detalle li h1{font-size:2.25em;margin: 40px 0;width:468px; line-height: 1.2em; }
 ul#detalle li  img{font-size:2.25em;margin: 25px 0;border:solid 3px #555;border-radius:5px;background:#bcbec1;margin-right: 40px;}
 ul#detalle li div.precio{font-size:2.1em;margin: 60px 0;}
 ul#detalle li div.tiempo{font-size:1.9em;margin: 60px 0;}
@@ -363,3 +363,15 @@ footer div.otros{float:right;margin-top:-120px;margin-right: 20px;}
     text-decoration: underline;
 }
 
+.b 
+{
+    font-weight: bold;
+}
+
+.bigbox {
+    padding: 0.2em 0.4em;
+    font-size: 2em;
+    display: block;
+    margin: 0.6em 0em;
+    width: 24em;
+}

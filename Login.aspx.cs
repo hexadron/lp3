@@ -27,6 +27,7 @@ public partial class Login : System.Web.UI.Page
 
             if (cli != null)
             {
+                Session["current_user"] = cli;
                 if (Request.Cookies["carrito"] != null)
                 {
                     Response.Redirect("Carrito.aspx");
@@ -43,8 +44,10 @@ public partial class Login : System.Web.UI.Page
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        if (lemail.Text == "" || lpassword.Text=="") { }
-        else
+        if (lemail.Text == "" || lpassword.Text=="") {
+            ScriptManager.RegisterStartupScript(this, this.GetType(),
+                "errorLogin", "alert('ingreso fallido')", true);
+        } else
         {
             client authenticated = 
                 Client.authenticate(lemail.Text, lpassword.Text);
@@ -67,6 +70,11 @@ public partial class Login : System.Web.UI.Page
                         Response.Redirect("Index.aspx");
                     }
                 }
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(),
+                "errorLogin", "alert('ingreso fallido')", true);
             }
        }
     }

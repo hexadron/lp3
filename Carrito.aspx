@@ -30,6 +30,17 @@
 					        </tr>
                         </ItemTemplate>
                 </asp:Repeater>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Total:</td>
+                        <td>
+                        S/.<asp:Label ID="total" runat="server">
+                            
+                        </asp:Label>
+                        </td>
+                    </tr>
                 </table>
 
                 <asp:Button id="updateCart" runat="server" Text="Actualizar Monto" 
@@ -45,7 +56,7 @@
 					<h3>Modo de Pago</h3>
 					<div>Cantidad: <asp:Label ID="cantidad" runat="server" Text="0"></asp:Label></div>
 					<div>Total: S/.<asp:Label ID="precio" runat="server" Text="0"></asp:Label></div>
-					<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" />
+					<a href="Checkout.aspx"><input type="image" src="https://www.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" /></a>
 				</div>
                 </asp:Panel>
 			</div>

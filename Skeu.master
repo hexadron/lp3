@@ -12,7 +12,7 @@
     <div id="wrapper">
       <ul class="sidebar">
         <li class="user">
-          <a href="">Usuario</a>
+          <a href="">Polos</a>
         </li>
         <li class="menu">
           <ul>
@@ -23,7 +23,7 @@
           </ul>
         </li>
         <li class="settings">
-          <a href="">Preferencias</a>
+          <a href="/lp3/admin/Reportes.aspx">Reporte de Ventas</a>
         </li>
       </ul>
       <div class="content-wrapper">

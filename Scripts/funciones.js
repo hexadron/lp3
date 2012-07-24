@@ -28,17 +28,28 @@ var calcTimeToDate = function(date, callback, endCallback) {
 }
 
 var showExpiration = function () {
-  $('.product-time').each(function (i, el) {
-    var self = $(el)
-    var date = new Date(self.data('expirein'))
-    
-    calcTimeToDate(date, function(timeToDie) {
-      self.find('.experin').html(timeToDie)
-    }, function() {
-      self.html('producto expirado')
+    $('.product-time').each(function (i, el) {
+        var self = $(el)
+        var date = new Date(self.data('expirein'))
+
+        calcTimeToDate(date, function (timeToDie) {
+            self.find('.experin').html(timeToDie)
+        }, function () {
+            self.html('producto expirado')
+        })
     })
-    
-  })
+
+    $('.tiempo input').each(function (i, el) {
+        var self = $(el)
+        var out = self.parent().find('.t')
+        var date = new Date(self.val())
+
+        calcTimeToDate(date, function (timeToDie) {
+            out.html("Expira en... " + timeToDie)
+        }, function () {
+            self.html('producto expirado')
+        })
+    });
 }
 
 $(function () {
