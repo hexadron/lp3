@@ -7,14 +7,35 @@ using System.Web.UI.WebControls;
 
 public partial class Success : System.Web.UI.Page
 {
+    private void RestartCart()
+    {
+        Session["cart"] = new List<CarItem>();
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
         {
-            int id;
-            if (int.TryParse(Request.Params["id"], out id))
+            string dir1="";
+            string dir2 = "";
+            var valores = Request.Params["direnv"].Split('@');
+            dir1 = valores[0];
+            dir2 = valores[1];
+            if (dir1!="" && dir2!="")
             {
-                var order = SellOrder.find(id);
+                var cart = (List<CarItem>)Session["cart"];
+                var user = (client)Session["current_user"];
+
+                sellOrder order = SellOrder.fromCart(cart);
+                order.client_id = user.id;
+                order.shipping_address = dir1;
+                order.billing_address =dir2;
+
+                SellOrder.save(order);
+
+                RestartCart();
+
+               // var order = SellOrder.find(id);
 
                 if (order != null)
                 {

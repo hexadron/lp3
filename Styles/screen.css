@@ -25,6 +25,12 @@ body {
   line-height: 1;
 }
 
+#ContentPlaceHolder1_CrystalReportViewer1
+{
+    width: 828px;
+    overflow: scroll;    
+}
+
 /* line 22, ../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
@@ -75,6 +81,8 @@ body {
   overflow: auto;
   width: 1200px;
 }
+
+
 
 /* line 12, ../sass/screen.sass */
 .sidebar, .content-wrapper {

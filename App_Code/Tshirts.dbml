@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tshirts" Class="TshirtsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=JULIO-PC;Initial Catalog=tshirts;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="tshirtsConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=USER-PC\SQLEXPRESS;Initial Catalog=tshirts;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="tshirtsConnectionString4" Provider="System.Data.SqlClient" />
   <Table Name="dbo.client" Member="clients">
     <Type Name="client">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -9,27 +9,15 @@
       <Association Name="client_sellOrder" Member="sellOrders" ThisKey="id" OtherKey="client_id" Type="sellOrder" />
     </Type>
   </Table>
-  <Table Name="dbo.tshirt" Member="tshirts">
-    <Type Name="tshirt">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="expire_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="description" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="imagen" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Association Name="tshirt_item" Member="items" ThisKey="id" OtherKey="tshirt_id" Type="item" />
-    </Type>
-  </Table>
   <Table Name="dbo.item" Member="items">
     <Type Name="item">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="tshirt_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="sellOrder_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="size" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="genre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Association Name="tshirt_item" Member="tshirt" ThisKey="tshirt_id" OtherKey="id" Type="tshirt" IsForeignKey="true" />
       <Association Name="sellOrder_item" Member="sellOrder" ThisKey="sellOrder_id" OtherKey="id" Type="sellOrder" IsForeignKey="true" />
+      <Association Name="tshirt_item" Member="tshirt" ThisKey="tshirt_id" OtherKey="id" Type="tshirt" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.sellOrder" Member="sellOrders">
@@ -42,6 +30,17 @@
       <Column Name="billing_address" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Association Name="sellOrder_item" Member="items" ThisKey="id" OtherKey="sellOrder_id" Type="item" />
       <Association Name="client_sellOrder" Member="client" ThisKey="client_id" OtherKey="id" Type="client" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tshirt" Member="tshirts">
+    <Type Name="tshirt">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="expire_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="imagen" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="tshirt_item" Member="items" ThisKey="id" OtherKey="tshirt_id" Type="item" />
     </Type>
   </Table>
 </Database>

@@ -23,29 +23,59 @@ public partial class Checkout : System.Web.UI.Page
                 }
                 carritoRepeater.DataSource = cart;
                 carritoRepeater.DataBind();
-
+                cantidad.Text = cantidadTotal.ToString();
                 total.Text = precioTotal.ToString();
             }
         }
-        else
-        {
-            var cart = (List<CarItem>)Session["cart"];
-            var user = (client)Session["current_user"];
-
-            sellOrder order = SellOrder.fromCart(cart);
-            order.client_id = user.id;
-            order.shipping_address = shipping_address.Text;
-            order.billing_address = billing_address.Text;
-
-            SellOrder.save(order);
-
-            RestartCart();
-            Response.Redirect("Success.aspx?id=" + order.id);
-        }
     }
 
-    private void RestartCart()
+   
+    protected void checkout_Click(object sender, EventArgs e)
     {
-        Session["cart"] = new List<CarItem>();
+        double final = double.Parse(total.Text);
+        final = Math.Round(final / 2.6,2);
+        //Build a URL String for the redirect
+        string redirecturl = "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_xclick&business=seller_1343017358_biz@gmail.com&item_name=Payment+for+Services";
+
+        //First name i assign static based on login details assign this value
+        redirecturl += "&first_name=Jhon";
+
+        //City i assign static based on login user detail you change this value
+        redirecturl += "&city=Lima";
+
+        //State i assign static based on login user detail you change this value
+        redirecturl += "&state=Peru";
+
+        //Product Name
+        redirecturl += "&item_name=Total";
+
+        //Product Amount
+        redirecturl += "&amount="+final;
+
+        //Business contact id
+        //redirecturl += "&business=nravindranmcaatgmail.com";
+
+        //Shipping charges if any
+        //redirecturl += "&shipping=5";
+
+        //Handling charges if any
+        //redirecturl += "&handling=5";
+
+        //Tax amount if any
+        //redirecturl += "&tax=5";
+
+        //Add quatity i added one only statically 
+        //redirecturl += "&quantity="+cantidad.Text;
+
+        //Currency code 
+        //redirecturl += "¤cy=USD";
+
+        //Success return page url
+        redirecturl += "&return=http://localhost:55986/lp3/Success.aspx?direnv=" + shipping_address.Text +"@"+billing_address.Text;
+
+        //Failed return page url
+        redirecturl += "&cancel_return=http://localhost:55986/lp3/Carrito.aspx";
+
+        Response.Redirect(redirecturl);
     }
 }

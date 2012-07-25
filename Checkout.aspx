@@ -32,8 +32,11 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <td></td>
                     <td>Total:</td>
+                    <td>
+                        <asp:Label ID="cantidad" runat="server">                            
+                         </asp:Label>
+                    </td>
                     <td>
                     S/.<asp:Label ID="total" runat="server">
                             
@@ -55,7 +58,8 @@
             <h1>4. Realizar Pago</h1>
             <p>
                 <span class="b">Nota:</span> <span>Ser&aacute;s redirigido a Paypal para completar el pago:</span>
-                <asp:Button Text="Realizar Pago" ID="checkout" runat="server" />
+                <asp:Button Text="Realizar Pago" ID="checkout" runat="server" 
+                    onclick="checkout_Click" />    
             </p>
         </li>
         </ol>

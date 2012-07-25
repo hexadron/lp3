@@ -19,6 +19,26 @@ public partial class _Default : System.Web.UI.Page
             logPanel.Visible = true;
             Pasarela.Visible = false;
         }
+
+         List<CarItem> cart = (List<CarItem>)Session["cart"];
+            var cantidadTotal = 0;
+            decimal precioTotal = 0;
+            if (cart != null)
+            {
+                foreach (CarItem c in cart)
+                {
+                    cantidadTotal += c.qty;
+                    precioTotal += (decimal)c.shirt.price * (decimal)c.qty;
+                }
+            }
+
+            if (cantidadTotal == 0 || precioTotal == 0)
+            {
+                Pasarela.Visible = false;
+            }
+            else {
+                Pasarela.Visible = true;
+            }
     }
 
     protected void Page_Load(object sender, EventArgs e)

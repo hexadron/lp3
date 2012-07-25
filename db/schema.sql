@@ -48,3 +48,4 @@ create table item (
 go
 
 insert into client values ('admin@example.com', 'password', 1);
+insert into client values ('carlos@demo.com', 'lp3', 2);

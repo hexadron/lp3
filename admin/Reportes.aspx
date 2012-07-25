@@ -6,22 +6,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form class="content" id="form1" runat="server">
-    <ul class="fields">
-        <li>
-            
-            <CR:CrystalReportViewer ID="report" runat="server" 
-                AutoDataBind="True" EnableDatabaseLogonPrompt="False"
-                EnableParameterPrompt="False" GroupTreeImagesFolderUrl="" Height="50px" 
-                ReportSourceID="VentasPorMes" ToolbarImagesFolderUrl="" ToolPanelWidth="200px" 
-                Width="350px" />
-            
-            <CR:CrystalReportSource ID="VentasPorMes" runat="server">
-                <Report FileName="VentasPorMes.rpt">
-                </Report>
-            </CR:CrystalReportSource>
-            
-        </li>  
-    </ul>
+    <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" 
+        AutoDataBind="true" oninit="CrystalReportViewer1_Init" />
 </form>
 </asp:Content>
 

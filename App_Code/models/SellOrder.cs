@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.SqlClient;
+using System.Data;
 
 /// <summary>
 /// Summary description for SellOrder
@@ -35,7 +37,7 @@ public class SellOrder
 
         order.total = total;
 
-        db.items.InsertAllOnSubmit(items);
+       // db.items.InsertAllOnSubmit(items);
         db.SubmitChanges();
 
         return order;
@@ -52,5 +54,20 @@ public class SellOrder
         return (from order in db.sellOrders
                 where order.id == id
                 select order).Single();
+    }
+
+    public DataTable listarOrdenes() 
+    {
+        SqlConnection CN = new SqlConnection("Data Source = USER-PC\\SQLEXPRESS; Initial Catalog = tshirts; Integrated Security = True");
+        //SqlConnection CN = new SqlConnection(""server=.;database=tshirts;uid=sa;pwd=sql");
+        
+        SqlDataAdapter da = new SqlDataAdapter("select * from sellOrder",CN);
+        
+        //var ord = from o in db.sellOrders select o;
+
+        DataTable dt = new DataTable();
+
+        da.Fill(dt);
+        return dt;
     }
 }
